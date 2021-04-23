@@ -41,7 +41,7 @@ public class GroupController implements Serializable {
 	@Path("/")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response createGrupo(Group newGrupo) {
+	public Response createGroup(Group newGrupo) {
 		if (grupoBean==null) {
 			grupoBean = new GroupBean();
 		}
@@ -52,12 +52,12 @@ public class GroupController implements Serializable {
 	@GET
 	@Path("/")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getGrupos() {
+	public Response getGroups() {
 		if (grupoBean==null) {
 			grupoBean = new GroupBean();
 		}
-		List<Group> listaGrupos = grupoBean.findAll();
-		return Response.ok(listaGrupos).build();
+		List<Group> groupList = grupoBean.findAll();
+		return Response.ok(groupList).build();
 	}
 
 }

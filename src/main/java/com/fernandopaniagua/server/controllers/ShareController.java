@@ -47,7 +47,6 @@ public class ShareController implements Serializable {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response createGasto(Share newGasto) {
 		if (gastoBean==null) {
-			System.out.println("************ HA FALLADO LA INYECCION DE USUARIO ***********");
 			gastoBean = new ShareBean();
 		}
 		gastoBean.create(newGasto);

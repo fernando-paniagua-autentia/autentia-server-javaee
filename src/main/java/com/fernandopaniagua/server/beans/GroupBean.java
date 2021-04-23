@@ -23,7 +23,6 @@ public class GroupBean extends AbstractPersistenceBean<Group> {
     @Override
     protected EntityManager getEntityManager() {
     	if (em==null) {
-    		System.out.println("***********ENTITYMANAGER A NULL***********");
     		EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("autentia-server-javaee");
     		em = emfactory.createEntityManager( );
     	}

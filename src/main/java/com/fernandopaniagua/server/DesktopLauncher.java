@@ -19,7 +19,6 @@ public class DesktopLauncher {
             System.out.println(usuario);
         }
         System.out.println("Size: " + usuarios.size());
-
         em.getTransaction().begin();
         User usuario = new User ("Usuario de prueba");
         em.persist(usuario);
