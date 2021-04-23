@@ -74,7 +74,7 @@ public class ShareController implements Serializable {
 		if (gastoBean==null) {
 			gastoBean = new ShareBean();
 		}
-		List<Share> listaGastos = gastoBean.findAllByIdPropietario(groupOwnerId);
+		List<Share> listaGastos = gastoBean.findAllByOwnerId(groupOwnerId);
 		return Response.ok(listaGastos).build();
 	}
 

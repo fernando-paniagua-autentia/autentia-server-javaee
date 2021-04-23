@@ -33,13 +33,10 @@ public class ShareBean extends AbstractPersistenceBean<Share> {
         return em;
     }
 
-    public List<Share> findAllByIdPropietario(int idPropietario) {
+    public List<Share> findAllByOwnerId(int idPropietario) {
     	EntityManager em = getEntityManager();
     	openTransaction(em);
     	String sentencia = "Select g from Share as g where g.idPropietario = " + idPropietario + " order by g.fecha desc";
-        /*javax.persistence.criteria.CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-        cq.select(cq.from(Gasto.class));
-        List<Gasto> searchList = getEntityManager().createQuery(cq).getResultList();*/
     	Query gastoQuery = em.createQuery(sentencia);
     	List<Share> searchList = gastoQuery.getResultList();
         closeTransation(em);

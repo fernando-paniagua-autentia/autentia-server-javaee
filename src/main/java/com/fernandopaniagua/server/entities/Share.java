@@ -31,7 +31,7 @@ public class Share implements Serializable {
 	@Column
 	private String fecha;
 	@OneToOne
-	@JoinColumn(name = "idpropietario", insertable = false, updatable = false)
+	@JoinColumn(name = "idusuario", insertable = false, updatable = false)
 	private User usuario;
 	
 	public Share() {
